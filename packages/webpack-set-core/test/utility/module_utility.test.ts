@@ -1,6 +1,6 @@
 import 'jest';
 import fs from 'fs';
-import { ModuleUtility } from '../../src/util/module_utility';
+import { ModuleUtility } from '../../src/utility/module_utility';
 
 describe('File Utility Test', () => {
     test('resolvePackageJson node_modules', () => {

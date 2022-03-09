@@ -1,6 +1,6 @@
 import 'jest';
 import path from 'path';
-import { FileUtility } from '../../src/util/file_utility';
+import { FileUtility } from '../../src/utility/file_utility';
 
 describe('File Utility Test', () => {
     test('find', () => {
