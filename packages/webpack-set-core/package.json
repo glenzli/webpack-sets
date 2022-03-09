@@ -1,0 +1,22 @@
+{
+  "name": "@g4iz/webpack-set-core",
+  "version": "1.0.0",
+  "description": "core functions for webpack set implement",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glenzli/webpack-sets.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "g4iz@outlook.com",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "~4.6.2",
+    "@g4iz/eslint-rules": "~1.0.0"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "commit",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "git-cz": "^4.8.0"
+  }
+}
