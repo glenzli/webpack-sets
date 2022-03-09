@@ -458,8 +458,14 @@
       "shouldPublish": true
     },
     {
-      "packageName": "@g4iz/eslint-rules-webpack-sets",
+      "packageName": "@webpack-sets/eslint-rules",
       "projectFolder": "tools/eslint-rules",
+      "reviewCategory": "tools",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@webpack-sets/compiler",
+      "projectFolder": "tools/compiler",
       "reviewCategory": "tools",
       "shouldPublish": false
     }

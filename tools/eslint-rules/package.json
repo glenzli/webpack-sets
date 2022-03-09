@@ -1,5 +1,5 @@
 {
-  "name": "@g4iz/eslint-rules-webpack-sets",
+  "name": "@webpack-sets/eslint-rules",
   "version": "1.0.0",
   "description": "eslint rules for wepback sets",
   "main": ".eslintrc.js",
@@ -7,10 +7,12 @@
     ".eslintrc.js"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "",
+    "start": "",
+    "test": ""
   },
   "dependencies": {
-    "@g4iz/eslint-rules": "~1.0.0",
+    "@g4iz/eslint-rules": "~1.1.0",
     "eslint": "~8.10.0",
     "@rushstack/eslint-config": "~2.5.1"
   },

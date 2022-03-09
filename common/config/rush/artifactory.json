@@ -22,7 +22,7 @@
      *
      *   https://your-company.jfrog.io/your-project/api/npm/npm-private/
      */
-    "registryUrl": "",
+    "registryUrl": "https://registry.npmmirror.com/",
 
     /**
      * A list of custom strings that "rush setup" should add to the user's ~/.npmrc file at the time
