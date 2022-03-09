@@ -456,6 +456,12 @@
       "projectFolder": "packages/mock-exports-loader",
       "reviewCategory": "production",
       "shouldPublish": true
+    },
+    {
+      "packageName": "@g4iz/eslint-rules-webpack-sets",
+      "projectFolder": "tools/eslint-rules",
+      "reviewCategory": "tools",
+      "shouldPublish": false
     }
   ]
 }

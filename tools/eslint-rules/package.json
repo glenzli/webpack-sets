@@ -1,0 +1,22 @@
+{
+  "name": "@g4iz/eslint-rules-webpack-sets",
+  "version": "1.0.0",
+  "description": "eslint rules for wepback sets",
+  "main": ".eslintrc.js",
+  "files": [
+    ".eslintrc.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@g4iz/eslint-rules": "~1.0.0",
+    "eslint": "~8.10.0",
+    "@rushstack/eslint-config": "~2.5.1"
+  },
+  "author": "@g4iz@outlook.com",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "~8.10.0"
+  }
+}
