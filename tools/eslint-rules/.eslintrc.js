@@ -5,5 +5,5 @@ module.exports = {
     extends: [
         require.resolve('@g4iz/eslint-rules'),
     ],
-    ignorePatterns: ['.eslintrc.js', 'dist']
+    ignorePatterns: ['.eslintrc.js', 'dist', 'jest.config.js'],
 };
