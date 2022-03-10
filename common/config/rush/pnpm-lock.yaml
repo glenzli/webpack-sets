@@ -9,15 +9,18 @@ specifiers:
   '@rush-temp/webpack-set-core': file:./projects/webpack-set-core.tgz
   '@rushstack/eslint-config': ~2.5.1
   '@types/babel__core': ~7.1.18
+  '@types/fs-extra': 9.0.13
   '@types/jest': ~27.4.1
   '@types/lodash-es': ~4.17.6
   '@types/node': ~17.0.21
   chalk: ~5.0.1
   eslint: ~8.10.0
+  fs-extra: 10.0.1
   jest: ~27.5.1
   lodash-es: ~4.17.21
   rimraf: ~3.0.2
   terser: ~5.12.0
+  ts-jest: ~27.1.3
   typescript: ~4.6.2
   webpack: ~5.70.0
   webpack-cli: ~4.9.2
@@ -25,21 +28,24 @@ specifiers:
 dependencies:
   '@babel/core': 7.17.5
   '@g4iz/eslint-rules': 1.1.0_typescript@4.6.2
-  '@rush-temp/compiler': file:projects/compiler.tgz_@babel+core@7.17.5
-  '@rush-temp/eslint-rules': file:projects/eslint-rules.tgz_81497e7930f37ec97be7ca75242fa777
+  '@rush-temp/compiler': file:projects/compiler.tgz
+  '@rush-temp/eslint-rules': file:projects/eslint-rules.tgz_typescript@4.6.2
   '@rush-temp/mock-exports-loader': file:projects/mock-exports-loader.tgz
   '@rush-temp/webpack-set-core': file:projects/webpack-set-core.tgz_webpack-cli@4.9.2
   '@rushstack/eslint-config': 2.5.1_eslint@8.10.0+typescript@4.6.2
   '@types/babel__core': 7.1.18
+  '@types/fs-extra': 9.0.13
   '@types/jest': 27.4.1
   '@types/lodash-es': 4.17.6
   '@types/node': 17.0.21
   chalk: 5.0.1
   eslint: 8.10.0
+  fs-extra: 10.0.1
   jest: 27.5.1
   lodash-es: 4.17.21
   rimraf: 3.0.2
   terser: 5.12.0
+  ts-jest: 27.1.3_c53d1ca518b3b945a0cb74482cae0a36
   typescript: 4.6.2
   webpack: 5.70.0_webpack-cli@4.9.2
   webpack-cli: 4.9.2_webpack@5.70.0
@@ -828,6 +834,12 @@ packages:
 
   /@types/estree/0.0.51:
     resolution: {integrity: sha512-CuPgU6f3eT/XgKKPqKd/gLZV1Xmvf1a2R5POBOGQa6uv82xpls89HU5zKeVoyR8XzHd1RGNOlQlvUe3CFkjWNQ==}
+    dev: false
+
+  /@types/fs-extra/9.0.13:
+    resolution: {integrity: sha512-nEnwB++1u5lVDM2UI4c1+5R+FYaKfaAzS4OococimjVm3nQw3TuzH5UNsocrcTBbhnerblyHj4A49qXbIiZdpA==}
+    dependencies:
+      '@types/node': 17.0.21
     dev: false
 
   /@types/graceful-fs/4.1.5:
@@ -2328,6 +2340,15 @@ packages:
       mime-types: 2.1.34
     dev: false
 
+  /fs-extra/10.0.1:
+    resolution: {integrity: sha512-NbdoVMZso2Lsrn/QwLXOy6rm0ufY2zEOKCDzJR/0kBsb0E6qed0P3iYK+Ath3BfvXEeu4JhEtXLgILx5psUfag==}
+    engines: {node: '>=12'}
+    dependencies:
+      graceful-fs: 4.2.9
+      jsonfile: 6.1.0
+      universalify: 2.0.0
+    dev: false
+
   /fs.realpath/1.0.0:
     resolution: {integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=}
     dev: false
@@ -3324,6 +3345,14 @@ packages:
       minimist: 1.2.5
     dev: false
 
+  /jsonfile/6.1.0:
+    resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
+    dependencies:
+      universalify: 2.0.0
+    optionalDependencies:
+      graceful-fs: 4.2.9
+    dev: false
+
   /jsx-ast-utils/3.2.1:
     resolution: {integrity: sha512-uP5vu8xfy2F9A6LGC22KO7e2/vGTS1MhP+18f++ZNlf0Ohaxbc9nIEwHAsejlJKyzfZzU5UIhe5ItYkitcZnZA==}
     engines: {node: '>=4.0'}
@@ -4315,6 +4344,11 @@ packages:
     engines: {node: '>= 4.0.0'}
     dev: false
 
+  /universalify/2.0.0:
+    resolution: {integrity: sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==}
+    engines: {node: '>= 10.0.0'}
+    dev: false
+
   /uri-js/4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
     dependencies:
@@ -4576,72 +4610,49 @@ packages:
       yargs-parser: 20.2.9
     dev: false
 
-  file:projects/compiler.tgz_@babel+core@7.17.5:
-    resolution: {integrity: sha512-aj5gdFfOyis7C0tcEQrFG0HzlPu59SJDEZmS/PCUgniaS0kSAcL/dMYCXxo2u15beXHV/JY5bKY3miMn4+y++g==, tarball: file:projects/compiler.tgz}
-    id: file:projects/compiler.tgz
+  file:projects/compiler.tgz:
+    resolution: {integrity: sha512-byH5VADbKDoap6TkqC6mFKwW6OKJgk9SWm0XAk1mJAqRZ6gF05Kb751GAJgmcPzHQK9CEOrd6lpronxk7qrAhA==, tarball: file:projects/compiler.tgz}
     name: '@rush-temp/compiler'
     version: 0.0.0
     dependencies:
-      '@types/jest': 27.4.1
       chalk: 5.0.1
       eslint: 8.10.0
-      jest: 27.5.1
-      rimraf: 3.0.2
       terser: 5.12.0
-      ts-jest: 27.1.3_c53d1ca518b3b945a0cb74482cae0a36
       typescript: 4.6.2
     transitivePeerDependencies:
-      - '@babel/core'
-      - babel-jest
-      - bufferutil
-      - canvas
-      - esbuild
-      - node-notifier
       - supports-color
-      - ts-node
-      - utf-8-validate
     dev: false
 
-  file:projects/eslint-rules.tgz_81497e7930f37ec97be7ca75242fa777:
-    resolution: {integrity: sha512-E8wygJXiihxzEKHhKUQf288UP0MKEYylq9erl1IUkq94elnThehYXbsYxCqg4lNnamyGVPyCDEpPdnDnL8DmEA==, tarball: file:projects/eslint-rules.tgz}
+  file:projects/eslint-rules.tgz_typescript@4.6.2:
+    resolution: {integrity: sha512-JnWmkQXvT2pMawYVUUDyhbqtT1nX57g6umtPc8ByCfXaOA0XMY2Uj5kQD+mAbfpjnc3VGSGl8h7PurWZGD3qow==, tarball: file:projects/eslint-rules.tgz}
     id: file:projects/eslint-rules.tgz
     name: '@rush-temp/eslint-rules'
     version: 0.0.0
     dependencies:
       '@g4iz/eslint-rules': 1.1.0_typescript@4.6.2
       '@rushstack/eslint-config': 2.5.1_eslint@8.10.0+typescript@4.6.2
-      '@types/jest': 27.4.1
       eslint: 8.10.0
-      jest: 27.5.1
-      rimraf: 3.0.2
-      ts-jest: 27.1.3_c53d1ca518b3b945a0cb74482cae0a36
     transitivePeerDependencies:
-      - '@babel/core'
-      - babel-jest
-      - bufferutil
-      - canvas
-      - esbuild
-      - node-notifier
       - supports-color
-      - ts-node
       - typescript
-      - utf-8-validate
     dev: false
 
   file:projects/mock-exports-loader.tgz:
-    resolution: {integrity: sha512-70rAhcBAoL+w/CZ4FHEbqpUuvngTckMRGgLKBapvU6WiN2ba+DpMi0JMBtDiSvVDzPLoNo1y12FXm/u5/7kyQA==, tarball: file:projects/mock-exports-loader.tgz}
+    resolution: {integrity: sha512-VSUYeX0nmAjFM8aSTuBvXuF8J5PwR3ML46TAUYYMV8TkERMQftoiWk4nDS2vZy8czwbK2RZtrbdSmbUirS3lwg==, tarball: file:projects/mock-exports-loader.tgz}
     name: '@rush-temp/mock-exports-loader'
     version: 0.0.0
     dependencies:
       '@babel/core': 7.17.5
       '@g4iz/eslint-rules': 1.0.0_typescript@4.6.2
       '@types/babel__core': 7.1.18
+      '@types/fs-extra': 9.0.13
       '@types/jest': 27.4.1
       '@types/lodash-es': 4.17.6
       '@types/node': 17.0.21
       '@typescript-eslint/eslint-plugin': 5.14.0_f4054b8c3cd621db16ae1b9d571bccc0
       '@typescript-eslint/parser': 5.14.0_eslint@8.10.0+typescript@4.6.2
       eslint: 8.10.0
+      fs-extra: 10.0.1
       jest: 27.5.1
       lodash: 4.17.21
       lodash-es: 4.17.21

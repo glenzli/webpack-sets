@@ -8,7 +8,7 @@
     "lint": "eslint src",
     "build": "",
     "start": "",
-    "test": ""
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -34,7 +34,10 @@
     "rimraf": "~3.0.2",
     "jest": "~27.5.1",
     "@types/jest": "~27.4.1",
-    "ts-jest": "~27.1.3"
+    "ts-jest": "~27.1.3",
+    "fs-extra": "10.0.1",
+    "@types/fs-extra": "9.0.13",
+    "lodash": "~4.17.21"
   },
   "dependencies": {
     "@babel/core": "~7.17.5",
