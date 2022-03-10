@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ParseExport Test parseExport sample 1 1`] = `
+Object {
+  "modules": Set {},
+  "origin": Map {
+    "default" => "default",
+    "func" => "func",
+    "CONST" => "CONST",
+    "TestClass" => "TestClass",
+  },
+  "reExports": Map {},
+}
+`;
+
+exports[`ParseExport Test parseExport sample 2 1`] = `
+Object {
+  "modules": Set {
+    "./parse_export_1.sample",
+  },
+  "origin": Map {
+    "exportLocal" => "local",
+    "CA" => "CA",
+    "CB" => "CB",
+    "CC" => "CD",
+  },
+  "reExports": Map {},
+}
+`;
+
+exports[`ParseExport Test parseExport sample 3 1`] = `
+Object {
+  "modules": Set {},
+  "origin": Map {
+    "default" => "default",
+  },
+  "reExports": Map {
+    "func" => Object {
+      "id": "func",
+      "location": "./parse_export_1.sample",
+    },
+    "kLocal" => Object {
+      "id": "exportLocal",
+      "location": "./parse_export_2.sample",
+    },
+  },
+}
+`;
