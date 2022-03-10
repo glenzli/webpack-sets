@@ -38,7 +38,7 @@ const loader: LoaderDefinitionFunction<MockExportsLoaderOptions> = function (thi
         const typeEntry = ModuleUtility.resolveTypeFile(this.resourcePath);
         if (typeEntry) {
             // 尝试从类型中提取
-            const typeExportIds = pasreExportIdsFromType(this.resourcePath);
+            const typeExportIds = pasreExportIdsFromType(typeEntry);
             logger.debug(`Types extracted from type '${typeEntry}'`, typeExportIds);
             exportIds.push(...typeExportIds);
         } else {
