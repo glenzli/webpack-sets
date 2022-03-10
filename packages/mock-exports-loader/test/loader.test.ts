@@ -9,10 +9,10 @@ describe('mockExportsLoader', () => {
         const callback = jest.fn();
         const logger = { debug: jest.fn(), warn: jest.fn() };
         loader.call(
-            // @ts-ignore
+            // @ts-ignore: mock
             {
                 getOptions: () => ({}),
-                // @ts-ignore
+                // @ts-ignore: mock
                 getLogger: () => logger,
                 resourcePath,
                 callback,
@@ -28,10 +28,10 @@ describe('mockExportsLoader', () => {
         const callback = jest.fn();
         const logger = { debug: jest.fn(), warn: jest.fn() };
         loader.call(
-            // @ts-ignore
+            // @ts-ignore: mock
             {
                 getOptions: () => ({ parseFromType: true, generateDefault: true }),
-                // @ts-ignore
+                // @ts-ignore: mock
                 getLogger: () => logger,
                 resourcePath,
                 callback,
@@ -47,14 +47,14 @@ describe('mockExportsLoader', () => {
         const callback = jest.fn();
         const logger = { debug: jest.fn(), warn: jest.fn() };
         loader.call(
-            // @ts-ignore
+            // @ts-ignore: mock
             {
                 getOptions: () => ({
                     parseFromType: true,
                     generateDefault: true,
                     createMocks: () => ({ CONST: 3, STR: 'test', FUNC: () => 1 }),
                 }),
-                // @ts-ignore
+                // @ts-ignore: mock
                 getLogger: () => logger,
                 resourcePath,
                 callback,

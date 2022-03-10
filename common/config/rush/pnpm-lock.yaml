@@ -17,6 +17,7 @@ specifiers:
   eslint: ~8.10.0
   fs-extra: 10.0.1
   jest: ~27.5.1
+  lodash: ~4.17.21
   lodash-es: ~4.17.21
   rimraf: ~3.0.2
   terser: ~5.12.0
@@ -42,6 +43,7 @@ dependencies:
   eslint: 8.10.0
   fs-extra: 10.0.1
   jest: 27.5.1
+  lodash: 4.17.21
   lodash-es: 4.17.21
   rimraf: 3.0.2
   terser: 5.12.0
@@ -419,6 +421,19 @@ packages:
 
   /@g4iz/eslint-rules/1.1.0_typescript@4.6.2:
     resolution: {integrity: sha512-ltixsulbO9M7HY96D6/+WpxMQ5D6rrKWnItn8cZGUdcOJdW+IZrtsNbbzfUv9AYUKe2TfvA2aNEx5i/4DetGkA==}
+    dependencies:
+      '@typescript-eslint/eslint-plugin': 5.14.0_f4054b8c3cd621db16ae1b9d571bccc0
+      '@typescript-eslint/parser': 5.14.0_eslint@8.10.0+typescript@4.6.2
+      eslint: 8.10.0
+      eslint-plugin-babel: 5.3.1_eslint@8.10.0
+      eslint-plugin-import: 2.25.4_eslint@8.10.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+    dev: false
+
+  /@g4iz/eslint-rules/1.2.0_typescript@4.6.2:
+    resolution: {integrity: sha512-/OvOgZEhOtYmtxMtYemgM9QUD7qymdFbz/qjcItZ7bHteBPJpHXT36cmuudsouCoCbXpItvtt1kZizPNcSPx+g==}
     dependencies:
       '@typescript-eslint/eslint-plugin': 5.14.0_f4054b8c3cd621db16ae1b9d571bccc0
       '@typescript-eslint/parser': 5.14.0_eslint@8.10.0+typescript@4.6.2
@@ -4624,12 +4639,12 @@ packages:
     dev: false
 
   file:projects/eslint-rules.tgz_typescript@4.6.2:
-    resolution: {integrity: sha512-JnWmkQXvT2pMawYVUUDyhbqtT1nX57g6umtPc8ByCfXaOA0XMY2Uj5kQD+mAbfpjnc3VGSGl8h7PurWZGD3qow==, tarball: file:projects/eslint-rules.tgz}
+    resolution: {integrity: sha512-pVT2gd+P47IPT4SG9OxwdoirG0MOW2E/G3LfEnQeau5VEpQ74BBDSHoli5erwC8wcAw9Hk1g/8EiFgeWeVf+jQ==, tarball: file:projects/eslint-rules.tgz}
     id: file:projects/eslint-rules.tgz
     name: '@rush-temp/eslint-rules'
     version: 0.0.0
     dependencies:
-      '@g4iz/eslint-rules': 1.1.0_typescript@4.6.2
+      '@g4iz/eslint-rules': 1.2.0_typescript@4.6.2
       '@rushstack/eslint-config': 2.5.1_eslint@8.10.0+typescript@4.6.2
       eslint: 8.10.0
     transitivePeerDependencies:

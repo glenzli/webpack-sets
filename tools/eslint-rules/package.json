@@ -19,6 +19,7 @@
   "author": "@g4iz@outlook.com",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "~8.10.0"
+    "eslint": "~8.10.0",
+    "@g4iz/eslint-rules": "~1.2.0"
   }
 }

@@ -9,7 +9,7 @@ export interface MockExportsLoaderOptions {
     /** 利用所有的 exports 合成为 default 导出 */
     generateDefault?: boolean;
     /** 自定义的 mock */
-    createMocks?: () => Record<string, any>;
+    createMocks?: () => Record<string, unknown>;
 }
 
 const LOADER = 'MockExportsLoader';
