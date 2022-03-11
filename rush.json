@@ -468,6 +468,12 @@
       "projectFolder": "tools/compiler",
       "reviewCategory": "tools",
       "shouldPublish": false
+    },
+    {
+      "packageName": "@webpack-sets/sample1",
+      "projectFolder": "samples/sample1",
+      "reviewCategory": "samples",
+      "shouldPublish": false
     }
   ]
 }

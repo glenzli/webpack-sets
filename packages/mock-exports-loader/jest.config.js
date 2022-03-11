@@ -5,7 +5,4 @@ module.exports = {
     collectCoverageFrom: [
         'src/**/*.{ts,tsx}',
     ],
-    moduleNameMapper: {
-        "lodash-es": "lodash",
-    },
 };

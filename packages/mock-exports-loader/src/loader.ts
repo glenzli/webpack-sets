@@ -1,4 +1,4 @@
-import { uniq, forEach } from 'lodash-es';
+import { uniq, forEach } from 'lodash';
 import { LoaderDefinitionFunction, WebpackError } from 'webpack';
 import { ModuleUtility, LoaderSchema, DEFUALT_ID } from '@g4iz/webpack-set-core';
 import { parseExportIdsFrom, pasreExportIdsFromType } from './parse_export_ids';
