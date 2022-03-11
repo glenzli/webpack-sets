@@ -19,7 +19,7 @@ const schema: LoaderSchema = {
     additionalProperties: false,
     properties: {
         parseFromType: { type: 'boolean' },
-        mergeToDefault: { type: 'boolean' },
+        generateDefault: { type: 'boolean' },
         createMocks: { instancof: 'Function' },
     },
 };
