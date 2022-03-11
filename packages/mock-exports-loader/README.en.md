@@ -17,6 +17,11 @@ Sometimes we may need to build special package for special purpose, and some mod
 🔳 Provide type definition files for mock file
 
 ## How to use
+### Install
+```sh
+npm i --save-dev mock-exports-loader
+```
+### Usage
 ```typescript
 module.exports = {
   // ...

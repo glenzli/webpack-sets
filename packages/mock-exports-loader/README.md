@@ -17,6 +17,11 @@ MockExportsLoader 可以将指定模块中的导出全部转换为空方法。�
 🔳 提供 mock 的类型声明文件
 
 ## 使用方法
+### 安装
+```sh
+npm i --save-dev mock-exports-loader
+```
+### 用法
 ```typescript
 module.exports = {
   // ...
