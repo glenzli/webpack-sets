@@ -22,6 +22,7 @@
   "devDependencies": {
     "typescript": "~4.6.2",
     "@webpack-sets/eslint-rules": "~1.0.0",
+    "@webpack-sets/compiler": "~1.0.0",
     "eslint": "~8.10.0",
     "@types/lodash-es": "~4.17.6",
     "@types/babel__core": "~7.1.18",
@@ -34,7 +35,6 @@
   },
   "dependencies": {
     "lodash-es": "~4.17.21",
-    "@babel/core": "~7.17.5",
-    "@webpack-sets/compiler": "~1.0.0"
+    "@babel/core": "~7.17.5"
   }
 }
