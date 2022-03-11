@@ -18,6 +18,13 @@
       "shellCommand": "git-cz",
       "autoinstallerName": "commit",
       "safeForSimultaneousRushProcesses": true
+    },
+    {
+      "commandKind": "bulk",
+      "name": "lint",
+      "summary": "Perform lint on each project",
+      "description": "Use eslint to check files on each proejct",
+      "enableParallelism": true
     }
     // {
     //   /**
