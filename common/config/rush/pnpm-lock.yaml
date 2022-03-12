@@ -11,6 +11,7 @@ specifiers:
   '@types/babel__core': ~7.1.18
   '@types/fs-extra': 9.0.13
   '@types/jest': ~27.4.1
+  '@types/lodash': ~4.14.179
   '@types/lodash-es': ~4.17.6
   '@types/node': ~17.0.21
   chalk: ~5.0.1
@@ -33,12 +34,13 @@ dependencies:
   '@rush-temp/compiler': file:projects/compiler.tgz
   '@rush-temp/eslint-rules': file:projects/eslint-rules.tgz_typescript@4.6.2
   '@rush-temp/mock-exports-loader': file:projects/mock-exports-loader.tgz_ts-node@10.7.0+webpack-cli@4.9.2
-  '@rush-temp/sample1': file:projects/sample1.tgz_@types+node@17.0.21
+  '@rush-temp/sample1': file:projects/sample1.tgz
   '@rush-temp/webpack-set-core': file:projects/webpack-set-core.tgz_ts-node@10.7.0+webpack-cli@4.9.2
   '@rushstack/eslint-config': 2.5.1_eslint@8.10.0+typescript@4.6.2
   '@types/babel__core': 7.1.18
   '@types/fs-extra': 9.0.13
   '@types/jest': 27.4.1
+  '@types/lodash': 4.14.179
   '@types/lodash-es': 4.17.6
   '@types/node': 17.0.21
   chalk: 5.0.1
@@ -1804,6 +1806,14 @@ packages:
 
   /create-require/1.1.1:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
+    dev: false
+
+  /cross-env/7.0.3:
+    resolution: {integrity: sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==}
+    engines: {node: '>=10.14', npm: '>=6', yarn: '>=1'}
+    hasBin: true
+    dependencies:
+      cross-spawn: 7.0.3
     dev: false
 
   /cross-spawn/7.0.3:
@@ -4733,7 +4743,7 @@ packages:
     dev: false
 
   file:projects/mock-exports-loader.tgz_ts-node@10.7.0+webpack-cli@4.9.2:
-    resolution: {integrity: sha512-QwiVh3HguJD81OOPhNcNBlFw3s2rd1N0O1ZWSyRGvxeBRvAn5Sj9ef/65JHpyxvrcPzYoTrxVC6xavzWuNk9Ag==, tarball: file:projects/mock-exports-loader.tgz}
+    resolution: {integrity: sha512-hOSw6qqaFBT794IgRscXNpsZTFaR4EqFJ5jSx/G3xbD+hh3Vtu+j3U3degl6eEUH/glWmqH/NzGOxNA8/UP1pQ==, tarball: file:projects/mock-exports-loader.tgz}
     id: file:projects/mock-exports-loader.tgz
     name: '@rush-temp/mock-exports-loader'
     version: 0.0.0
@@ -4768,13 +4778,14 @@ packages:
       - webpack-cli
     dev: false
 
-  file:projects/sample1.tgz_@types+node@17.0.21:
-    resolution: {integrity: sha512-0UHyEqqsm4mBTB774MBP/ZrDLjlh69eXX/0XDfG2wNlj8EEkqdC0+HtbRRpryzGYeVO5fpK/CehNejpMx8+xgQ==, tarball: file:projects/sample1.tgz}
-    id: file:projects/sample1.tgz
+  file:projects/sample1.tgz:
+    resolution: {integrity: sha512-yZNTqnNkP0LNWTmnPUjlECI1ovG9T38bpVjvVJgEM12Tf9aCL1AYAjdj1weezCBg4oUTU3Rnvhk0aZh90uU4Ig==, tarball: file:projects/sample1.tgz}
     name: '@rush-temp/sample1'
     version: 0.0.0
     dependencies:
       '@types/fs-extra': 9.0.13
+      '@types/node': 17.0.21
+      cross-env: 7.0.3
       eslint: 8.10.0
       fs-extra: 10.0.1
       ts-loader: 9.2.8_typescript@4.6.2+webpack@5.70.0
@@ -4785,7 +4796,6 @@ packages:
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
-      - '@types/node'
       - '@webpack-cli/generators'
       - '@webpack-cli/migrate'
       - esbuild

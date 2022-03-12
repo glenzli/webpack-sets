@@ -187,6 +187,13 @@
    * For example, you might define a "--production" parameter for the "rush build" command.
    */
   "parameters": [
+    {
+      "parameterKind": "flag",
+      "longName": "--production",
+      "shortName": "-P",
+      "description": "Enable production build",
+      "associatedCommands": ["build", "rebuild"]
+    }
     // {
     //   /**
     //    * (Required) Determines the type of custom parameter.

@@ -19,13 +19,14 @@ function traverse(dir, action) {
   });
 }
 
+const isProd = process.env.NODE_ENV === 'production' || /(--production|-P)/.test(process.argv.join(' '));
+
 // 使用tsc编译
 function compile() {
   const startTime = performance.now();
 
   const projectPath = process.cwd();
   const project = JSON.parse(fs.readFileSync(path.resolve(projectPath, 'package.json'), { encoding: 'utf-8' })).name;
-  const isProd = process.env.NODE_ENV === 'production';
   const configFile = path.resolve(projectPath, isProd ? 'tsconfig.prod.json' : 'tsconfig.dev.json');
 
   console.log(chalk.green(`Compile ${project} ...`));

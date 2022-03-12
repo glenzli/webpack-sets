@@ -20,7 +20,7 @@ const configuration: Configuration = {
                 test: /\.tsx?/,
                 exclude: /node_modules/,
                 use: {
-                    loader: 'ts-loader'
+                    loader: 'ts-loader',
                 },
             },
             {
@@ -30,11 +30,12 @@ const configuration: Configuration = {
                     options: {
                         parseFromType: true,
                         generateDefault: true,
-                    }
+                    },
                 },
-            }
+            },
         ],
     },
+    devtool: false,
 };
 
 export default configuration;
