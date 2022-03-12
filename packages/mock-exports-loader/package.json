@@ -20,6 +20,9 @@
     "loader",
     "webpack"
   ],
+  "files": [
+    "dist"
+  ],
   "author": "g4iz@outlook.com",
   "license": "MIT",
   "devDependencies": {
